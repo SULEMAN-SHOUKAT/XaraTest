@@ -35,9 +35,6 @@ class Rectangle {
 
   //set Rectangle position
   setPosition(x, y) {
-    if (this.#id == null) {
-      throw "no rectangle intit";
-    }
     let rectangle = document.getElementById(`${this.#Id}`);
     rectangle.style.top = x;
     rectangle.style.left = y;
@@ -47,9 +44,6 @@ class Rectangle {
 
   //set Rectangle height and width
   setSize(height, width) {
-    if (this.#id == null) {
-      throw "no rectangle intit";
-    }
     let rectangle = document.getElementById(`${this.#Id}`);
     rectangle.style.height = height;
     rectangle.style.width = width;
@@ -59,18 +53,12 @@ class Rectangle {
 
   //set Rectangle cornor radius
   setCornerRadius(radius) {
-    if (this.#id == null) {
-      throw "no rectangle intit";
-    }
     let rectangle = document.getElementById(`${this.#Id}`);
     rectangle.style.borderRadius = `${radius}px`;
     this.#radius = radius;
   }
   //set Rectangle json Data
   toJSON() {
-    if (this.#id == null) {
-      throw "no rectangle intit";
-    }
     let json = {
       id: this.#Id,
       width: this.#width,
